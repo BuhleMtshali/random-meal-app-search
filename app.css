@@ -6,4 +6,28 @@
 body {
   background-color: var(--bg-color);
   font-family: "Inter Tight", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* min-height: 100vh; */
+}
+h1 {
+  color: var(--heading-color);
+}
+button {
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--color-decor);
+  color: white;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--heading-color);
+  color: white;
 }
