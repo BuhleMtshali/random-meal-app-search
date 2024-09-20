@@ -2,7 +2,7 @@
 const getMealBtn = document.getElementById("getMeal");
 let mealImg = document.getElementById("img");
 let mealName = document.getElementById("meal-name");
-let mealArea = document.getElementById("meal-area");
+let mealArea = document.getElementById("location");
 let recipe = document.getElementById("recipe");
 let youTubeLink = document.getElementById("youtube-link");
 let mealContainer = document.getElementById("meal-container");
@@ -21,6 +21,9 @@ function findMeal() {
 //rendering meals out
 function renderMeal(response) {
   console.log(response.data);
-  mealImg.src = response.data.meals[0].strMealThumb;
-  mealName.innerHTML = response.data.meals[0].strMeal;
+  mealImg.innerHTML = `<img src="${response.data.meals[0].strMealThumb}" alt="meal image" />`;
+  mealName.innerText = response.data.meals[0].strMeal;
+  mealArea.innerText = response.data.meals[0].strArea;
+  recipe.innerText = response.data.meals[0].strInstructions;
+  youTubeLink.innerText = response.data.meals[0].strYoutube;
 }
