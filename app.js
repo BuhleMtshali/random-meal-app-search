@@ -26,8 +26,8 @@ function renderMeal(response) {
   console.log(response.data);
   mealImg.innerHTML = `<img src="${response.data.meals[0].strMealThumb}" alt="meal image" />`;
   mealName.innerText = response.data.meals[0].strMeal;
-  mealArea.innerText = response.data.meals[0].strArea;
-  categoryElement.innerText = response.data.meals[0].strCategory;
+  mealArea.innerHTML = `<p><span class='bold'>Origin:</span> <span class='area'>${response.data.meals[0].strArea}</span></p>`;
+  categoryElement.innerHTML = `<p><span class='bold'>Category: </span><span class='area'>${response.data.meals[0].strCategory}</span></p>`;
   youtube.innerHTML = `<p><span class='bold'>Watch Tutorial:</span> <a href="${response.data.meals[0].strYoutube}" target="_blank">Click Here</a> 🎥</p>`;
   recipeIngrediants.innerHTML = `<p class="recipe"><span class='bold'>Main Ingrediants:</span> <span id="recipe">${response.data.meals[0].strIngredient1}, ${response.data.meals[0].strIngredient2} & ${response.data.meals[0].strIngredient3}  </span></p>`;
 }

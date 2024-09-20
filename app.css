@@ -54,3 +54,14 @@ p {
 #recipe {
   color: var(--color-decor);
 }
+#meal-name {
+  color: var(--heading-color);
+}
+#category {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.area {
+  color: var(--heading-color);
+}
