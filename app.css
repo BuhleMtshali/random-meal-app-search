@@ -1,5 +1,9 @@
 :root {
-  --bg-color: #03045e;
-  --heading-color: white;
-  --color-decor: #00b4d8;
+  --bg-color: #264653;
+  --heading-color: #e76f51;
+  --color-decor: #2a9d8f;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter Tight", sans-serif;
 }
