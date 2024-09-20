@@ -1,6 +1,13 @@
-//get btn and calls the api function
+//elements definition
 const getMealBtn = document.getElementById("getMeal");
+let mealImg = document.getElementById("img");
+let mealName = document.getElementById("meal-name");
+let mealArea = document.getElementById("meal-area");
+let recipe = document.getElementById("recipe");
+let youTubeLink = document.getElementById("youtube-link");
 let mealContainer = document.getElementById("meal-container");
+
+//get meal btn which calls the api function
 getMealBtn.addEventListener("click", () => {
   findMeal();
 });
@@ -14,16 +21,6 @@ function findMeal() {
 //rendering meals out
 function renderMeal(response) {
   console.log(response.data);
-  mealContainer.innerHTML = `<div class="img">
-          <img src="#" alt="meal image" />
-        </div>
-        <div class="meal-name">
-          <h2 class="name"></h2>
-          <p class="meal-area"></p>
-        </div>
-        <div class="recipe-instructions">
-          <p class="recipe"></p>
-          <p class="link"></p>
-        </div>
-      `;
+  mealImg.src = response.data.meals[0].strMealThumb;
+  mealName.innerHTML = response.data.meals[0].strMeal;
 }
