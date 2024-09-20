@@ -8,6 +8,7 @@ let recipe = document.getElementById("recipe");
 let youTubeLink = document.getElementById("youtube-link");
 let mealContainer = document.getElementById("meal-container");
 let recipeIngrediants = document.querySelector(".recipe-instructions");
+let youtube = document.getElementById("youtube");
 
 //get meal btn which calls the api function
 getMealBtn.addEventListener("click", () => {
@@ -27,5 +28,6 @@ function renderMeal(response) {
   mealName.innerText = response.data.meals[0].strMeal;
   mealArea.innerText = response.data.meals[0].strArea;
   categoryElement.innerText = response.data.meals[0].strCategory;
+  youtube.innerHTML = `<p>Watch Tutorial: <a href="${response.data.meals[0].strYoutube}" target="_blank">Click Here</a></p>`;
   recipeIngrediants.innerHTML = `<p class="recipe">Main Ingrediants: <span id="recipe">${response.data.meals[0].strIngredient1},${response.data.meals[0].strIngredient2} & ${response.data.meals[0].strIngredient3}  </span></p>`;
 }

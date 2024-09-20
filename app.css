@@ -5,6 +5,7 @@
 }
 body {
   background-color: var(--bg-color);
+  user-select: none;
   font-family: "Inter Tight", sans-serif;
   text-align: center;
   display: flex;
