@@ -1,11 +1,13 @@
 //elements definition
 const getMealBtn = document.getElementById("getMeal");
 let mealImg = document.getElementById("img");
+let categoryElement = document.getElementById("category");
 let mealName = document.getElementById("meal-name");
 let mealArea = document.getElementById("location");
 let recipe = document.getElementById("recipe");
 let youTubeLink = document.getElementById("youtube-link");
 let mealContainer = document.getElementById("meal-container");
+let recipeIngrediants = document.querySelector(".recipe-instructions");
 
 //get meal btn which calls the api function
 getMealBtn.addEventListener("click", () => {
@@ -24,6 +26,6 @@ function renderMeal(response) {
   mealImg.innerHTML = `<img src="${response.data.meals[0].strMealThumb}" alt="meal image" />`;
   mealName.innerText = response.data.meals[0].strMeal;
   mealArea.innerText = response.data.meals[0].strArea;
-  recipe.innerText = response.data.meals[0].strInstructions;
-  youTubeLink.innerText = response.data.meals[0].strYoutube;
+  categoryElement.innerText = response.data.meals[0].strCategory;
+  recipeIngrediants.innerHTML = `<p class="recipe">Main Ingrediants: <span id="recipe">${response.data.meals[0].strIngredient1},${response.data.meals[0].strIngredient2} & ${response.data.meals[0].strIngredient3}  </span></p>`;
 }
