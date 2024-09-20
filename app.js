@@ -28,6 +28,6 @@ function renderMeal(response) {
   mealName.innerText = response.data.meals[0].strMeal;
   mealArea.innerText = response.data.meals[0].strArea;
   categoryElement.innerText = response.data.meals[0].strCategory;
-  youtube.innerHTML = `<p>Watch Tutorial: <a href="${response.data.meals[0].strYoutube}" target="_blank">Click Here</a></p>`;
-  recipeIngrediants.innerHTML = `<p class="recipe">Main Ingrediants: <span id="recipe">${response.data.meals[0].strIngredient1},${response.data.meals[0].strIngredient2} & ${response.data.meals[0].strIngredient3}  </span></p>`;
+  youtube.innerHTML = `<p><span class='bold'>Watch Tutorial:</span> <a href="${response.data.meals[0].strYoutube}" target="_blank">Click Here</a> 🎥</p>`;
+  recipeIngrediants.innerHTML = `<p class="recipe"><span class='bold'>Main Ingrediants:</span> <span id="recipe">${response.data.meals[0].strIngredient1}, ${response.data.meals[0].strIngredient2} & ${response.data.meals[0].strIngredient3}  </span></p>`;
 }
