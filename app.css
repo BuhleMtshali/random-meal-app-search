@@ -65,3 +65,8 @@ p {
 .area {
   color: var(--heading-color);
 }
+.cursive {
+  font-size: 15px;
+  color: white;
+  font-style: italic;
+}
